@@ -12,33 +12,37 @@
 </head>
 <body>
 <div class="weather-app">
-    <header>
-     <form class="search-form">
-            <input type="search" class="search-input"placeholder="Enter a city.." required />
-            <button type="submit" ><i class="fa fa-search" aria-hidden="true"> </i></button>
-    </form>
-    <div> 
-        🔆 
-        <br />
-        24℃
-        </div>
-        </header>
+   
     <main>
-        <div>
-            <p>
-            Monday 14:49
+        <div class="weather-main">  
+         <div class="app-right">
+            <header>
+                <form class="search-form">
+                    <input type="search" class="search-input" placeholder="Enter a city.." required />
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"> </i></button>
+                </form>
+            </header>
+            <p class="temp">
+                <span class="temp-emoji">🔆</span>
+            <br />
+            <span class="temp-value">24</span><span class="unit">°C</span>
             </p>
-            <p>
+        </div>
+        <div>
+            <p class="weather-details">
             Precipitation
             <br />
-            Humidity: 66%
+            Humidity :   <strong>66%</strong>
             <br />
-            Wind: 3,13km/h
+            Wind :   <strong>3,13km/h</strong>
+           
             </p>
-        <h1>
+            <span class="date">Monday   14:49</span>
+        <h1 class="city">
             Bremen
         </h1>
     </div>
+</div>
 </main>
     <footer>
     This project was coded by <a href="https://github.com/phillis21" target="_blank">Nomalanga Wadi</a>
