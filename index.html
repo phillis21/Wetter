@@ -17,8 +17,8 @@
         <div class="weather-main">  
          <div class="app-right">
             <header>
-                <form class="search-form">
-                    <input type="search" class="search-input" placeholder="Enter a city.." required />
+                <form class="search-form" id="search-form">
+                    <input type="search" class="search-input" id="entered-city" placeholder="Enter a city.." required />
                     <button type="submit"><i class="fa fa-search" aria-hidden="true"> </i></button>
                 </form>
             </header>
@@ -38,7 +38,7 @@
            
             </p>
             <span class="date">Monday   14:49</span>
-        <h1 class="city">
+        <h1 class="city" id="city">
             Bremen
         </h1>
     </div>
@@ -50,5 +50,6 @@
     and hosted on <a href="https://lighthearted-unicorn-fc27d6.netlify.app" target="_blank">Netlify</a>
     </footer>
 </div>  
+<script src="src/index.js"></script>
 </body>
 </html>
