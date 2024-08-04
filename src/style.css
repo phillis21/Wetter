@@ -69,8 +69,10 @@ position: relative;
         
 }
 .temp .temp-emoji{
-    font-size: 40px;
-    margin-top: 20px;
+    width: 80px;
+    height : 80px;
+    position: relative;
+    left: -10px;
 }
 .temp .temp-value{
     font-size: 70px;

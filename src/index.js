@@ -6,6 +6,11 @@ let humidity = document.querySelector("#humidity-value");
 let windSpeed = document.querySelector("#wind-speed");
 let timeElement = document.querySelector("#real-time");
 let date = new Date(response.data.time * 1000);
+let icon = document.querySelector("#icon");
+
+icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="temp-emoji"><img/>`;
+
+
 
 
 tempValue.innerHTML = Math.round(response.data.temperature.current);
