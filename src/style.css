@@ -8,15 +8,15 @@ body{
     background: #F8F7F5;
     margin: 45px auto;
     max-width:600px;
-    max-height: 800px;
-    padding: 50px;
+    max-height: 400px;
+    padding: 30px;
     box-shadow: 0 30px 50px #A89E91;
     border-radius: 16px;
 
 }
 header{
-padding: 0 0 30px 0;
-width:200px;
+padding: 20px 0 40px 0;
+width:400px;
 display: flex;
 }
 
@@ -24,7 +24,7 @@ display: flex;
     border: none;
     border-radius: 16px;
     padding: 12px;
-    width:80%;
+    width:70%;
     font-size: 16px;
     position: relative;
     top:-20%;
@@ -49,8 +49,6 @@ main{
 }
 .temp {
     width: 200px;
-    margin-top: 0 auto;
-    padding-top: 10px;
     border-right:  1px solid #89715D;
 }
 
