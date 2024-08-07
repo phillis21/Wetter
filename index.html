@@ -13,36 +13,31 @@
 </head>
 <body>
 <div class="weather-app">
-   
-    <main>
-        <div class="weather-main">  
-         <div class="app-right">
             <header>
                 <form class="search-form" id="search-form">
                     <input type="search" class="search-input" id="entered-city" placeholder="Enter a city.." required />
                     <button type="submit"><i class="fa fa-search" aria-hidden="true"> </i></button>
                 </form>
             </header>
-            <p class="temp">
-                <span id="icon"></span>
-            <br />
-            <span class="temp-value" id="temp-value"></span><span class="unit">°C</span>
-            </p>
+        <main>
+    <div class="weather-main">
+        <div class="temp">
+            <div id="icon"></div>
+            <div class="temp-value" id="temp-value"></div><div class="unit">°C</div>
         </div>
-        <div>
-            <p class="weather-details">
+        <div class="datecity">
+            <div class="weather-details">
+            <span class="date" id="real-time"></span>
+            <br/>
             <span id="description">Precipitation</span>
             <br />
             Humidity :   <strong id="humidity-value"></strong>
             <br />
             Wind :   <strong id="wind-speed"></strong>
-           
-            </p>
-            <span class="date" id="real-time"></span>
-        <h1 class="city" id="city">
-        </h1>
-    </div>
-</div>
+            </div>
+            <h1 class="city" id="city"></h1>
+        </div>    
+      </div>
 </main>
     <footer>
     This project was coded by <a href="https://github.com/phillis21" target="_blank">Nomalanga Wadi</a>

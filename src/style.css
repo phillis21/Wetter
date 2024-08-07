@@ -1,99 +1,116 @@
 body{
     background-color: #D8D4D0;
-
-     font-family: "Encode Sans Condensed", sans-serif;
+    font-family: "Encode Sans Condensed", sans-serif;
     font-weight: 400;
-            font-style: normal;
+    font-style: normal;
 }
 .weather-app{
     background: #F8F7F5;
     margin: 45px auto;
     max-width:600px;
     max-height: 800px;
-    padding: 30px;
+    padding: 50px;
     box-shadow: 0 30px 50px #A89E91;
     border-radius: 16px;
 
 }
-.app-right{
-    width:180px;
-    border-right:solid 1px #89715D;
-    
+header{
+padding: 0 0 30px 0;
+width:200px;
+display: flex;
 }
 
-.search-input{
-    border:none;
+.search-input {
+    border: none;
     border-radius: 16px;
-    padding:12px;
-    margin:10px auto;
+    padding: 12px;
     width:80%;
     font-size: 16px;
-   
+    position: relative;
+    top:-20%;
 
 }
+
 .search-form button {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    position: relative;
+    top: -10%;
+
 }
-main .weather-main{
+main{
+    padding: 30px 0;
+}
+
+.weather-main{
     display:flex;
     justify-content: space-between;
 }
-.weather-details{
+.temp {
+    width: 200px;
+    margin-top: 0 auto;
+    padding-top: 10px;
+    border-right:  1px solid #89715D;
+}
+
+.temp .temp-emoji {
+    width: 90px;
     position: relative;
-    top: 0px;
-    color:#A89E91;
+    right:-15%;
+    top:-50%;
+}
+
+.temp .temp-value {
+    font-size: 60px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    top:0%;
+    right:-25%;
+}
+
+.temp .unit {
+    font-size: 30px;
+    font-weight: thin;
+    color: #89715D;
+    position: relative;
+    top:-35%;
+    right:-52%;
+}
+
+.weather-details {
+    color: #A89E91;
+    position: relative;
+    top:-40%;
 
 }
-.weather-details strong{
+.weather-details strong {
     color: #89715D;
 }
-.date{
-position: relative;
-    top: -60px;
-    left: -280px;
+.date {
     font-weight: bold;
-    color:#89715D;
+    color: #89715D;
+    line-height: 28px;
+
 }
 .city{
     position: relative;
-        top: -60px;
-        left: -280px;
-    
+    top:-40%;
 }
-.temp{
-    position: relative;
-        top: 50px;
-        right: -45px;
-        
-}
-.temp .temp-emoji{
-    width: 80px;
-    height : 80px;
-    position: relative;
-    left: -10px;
-}
-.temp .temp-value{
-    font-size: 70px;
-    font-weight: 100;
-    color:rgba(0,0,0,0.7);
-}
-.temp .unit{
-    font-size:20px;
-    position: relative;
-    top:-30px;
-    font-weight: bold;
+
+a {
     color: #89715D;
 }
-a{
-    color:#89715D;
-}
-footer{
-    text-align:right;
+
+footer {
+    text-align: center;
     font-size: 10px;
-    font-weight:500;
+    font-weight: 500;
     padding: 30px auto;
-color:rgba(0,0,0,0.7);
+    color: rgba(0, 0, 0, 0.7);
+    
+   
 
 }
+
