@@ -46,8 +46,28 @@ function handleSearchSubmit(event){
     searchCity(searchInput.value);
 }
 
+
+function displayForecast(){
+let forecast = document.querySelector("#forecast");
+let days = ["Sun","Mon","Tues","Wed","Thurs"];
+let forecastHtml = "";
+days.forEach(function(day) {
+forecastHtml = forecast +  `<div class="weather-forecast-day">
+            <div class="wf-date">${day}</div> 
+            <div class="wf-icon">🔆</div> 
+            <div class="wf-temperatures">
+                <div class="wf-temp"><strong>15</strong> </div>
+                <div class="wf-temp">9</div>
+            </div>
+        </div>`;
+       
+});
+forecast.innerHTML = forecastHtml;
+}
+
 let form = document.querySelector("#search-form");
 console.log(form);
 form.addEventListener("submit",handleSearchSubmit);
 
 searchCity("Bremen");
+displayForecast();
