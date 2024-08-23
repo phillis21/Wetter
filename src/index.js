@@ -19,6 +19,7 @@ description.innerHTML = response.data.condition.description;
 humidity.innerHTML = `${response.data.temperature.humidity}%`;
 windSpeed.innerHTML = `${response.data.wind.speed} km/h`;
 timeElement.innerHTML = formatDate(date);
+getForecast(response.data.city);
 }
 
 function formatDate(date){
@@ -46,13 +47,20 @@ function handleSearchSubmit(event){
     searchCity(searchInput.value);
 }
 
+function getForecast(city){
+    let apiKey = "b7d930477o00bba5cdf7a7taf17bc8ca";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}}&key=${apiKey}`;
+    axios(apiUrl).then(displayForecast);
 
-function displayForecast(){
+}
+
+
+function displayForecast(response){
 let forecast = document.querySelector("#forecast");
 let days = ["Sun","Mon","Tues","Wed","Thurs"];
 let forecastHtml = "";
 days.forEach(function(day) {
-forecastHtml = forecast +  `<div class="weather-forecast-day">
+forecastHtml = forecastHtml +  `<div class="weather-forecast-day">
             <div class="wf-date">${day}</div> 
             <div class="wf-icon">🔆</div> 
             <div class="wf-temperatures">
@@ -70,4 +78,3 @@ console.log(form);
 form.addEventListener("submit",handleSearchSubmit);
 
 searchCity("Bremen");
-displayForecast();
