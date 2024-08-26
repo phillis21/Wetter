@@ -19,7 +19,7 @@ description.innerHTML = response.data.condition.description;
 humidity.innerHTML = `${response.data.temperature.humidity}%`;
 windSpeed.innerHTML = `${response.data.wind.speed} km/h`;
 timeElement.innerHTML = formatDate(date);
-getForecast(response.data.city);
+//getForecast(response.data.city);
 }
 
 function formatDate(date){
@@ -47,31 +47,14 @@ function handleSearchSubmit(event){
     searchCity(searchInput.value);
 }
 
-function getForecast(city){
-    let apiKey = "b7d930477o00bba5cdf7a7taf17bc8ca";
-    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}}&key=${apiKey}`;
-    axios(apiUrl).then(displayForecast);
+function formatDay(timestamp){
+    let date = new Date(timestamp * 1000);
+    let days = ["Sun", "Mon", "Tue", "Wed","Thur","Fri","Sat"];
 
+    return days[date.getDay()];
 }
 
 
-function displayForecast(response){
-let forecast = document.querySelector("#forecast");
-let days = ["Sun","Mon","Tues","Wed","Thurs"];
-let forecastHtml = "";
-days.forEach(function(day) {
-forecastHtml = forecastHtml +  `<div class="weather-forecast-day">
-            <div class="wf-date">${day}</div> 
-            <div class="wf-icon">🔆</div> 
-            <div class="wf-temperatures">
-                <div class="wf-temp"><strong>15</strong> </div>
-                <div class="wf-temp">9</div>
-            </div>
-        </div>`;
-       
-});
-forecast.innerHTML = forecastHtml;
-}
 
 let form = document.querySelector("#search-form");
 console.log(form);
